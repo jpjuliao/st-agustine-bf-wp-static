@@ -9,13 +9,13 @@ Generate the Static Site assets from Wordpress and Simply Static.
 5. Setup deployment method to local directory and set the destination to the git repository folder
 
 ## Deployment
-1. Remove all static sites except .git, .gitignore, static-site and README.md
+1. Generate new static site files with the Simply Static
+2. Remove all static sites except .git, .gitignore, static-site and README.md
 ```
 find . -mindepth 1 -maxdepth 1 \( ! -name .git -a ! -name .gitignore -a ! -name static-site -a ! -name README.md \) -exec rm -r {} \;\n
 ```
-2. Generate new static site with the Simply Static plugin into static-site folder
-3. Move generated files to root
+1. Move generated files to root
 ```
 cp -r static-site/* . 
 ```
-4. Git commit and push
+1. Git commit and push
